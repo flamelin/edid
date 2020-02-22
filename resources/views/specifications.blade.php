@@ -11,13 +11,13 @@
                     <table class="table table-striped">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Model name</th>
-                                <th>Ver</th>
-                                <th>Num</th>
-                                <th>Manufacturer</th>
-                                <th>VenderId</th>
-                                <th>Year</th>
-                                <th>Week</th>
+                                <th>@sortablelink('model', 'Model name')</th>
+                                <th>@sortablelink('ver', 'Ver')</th>
+                                <th>@sortablelink('num', 'Num')</th>
+                                <th>@sortablelink('manufacturer', 'Manufacturer')</th>
+                                <th>@sortablelink('vender_id', 'VenderId')</th>
+                                <th>@sortablelink('year', 'Year')</th>
+                                <th>@sortablelink('week', 'Week')</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,6 +34,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <div class="pagination pagination-centered">
+                        {{ $specifications->links() }}
+                    </div>
                 </div>
             </div>
         </div>

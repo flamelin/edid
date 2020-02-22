@@ -10,7 +10,7 @@ class SpecificationsController extends Controller
     public function __invoke()
     {
         return view('specifications', [
-            'specifications' => Specification::all()
+            'specifications' => Specification::sortable()->paginate(100)
         ]);
     }
 }
